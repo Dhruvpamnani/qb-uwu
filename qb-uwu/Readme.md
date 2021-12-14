@@ -14,6 +14,36 @@
 
 ## File additions
 
+# qb-core/shared.lua
+
+- Add to QBShared.Jobs
+
+["uwu"] = { --  UwU Cafe Job
+		label = "UwU Cafe",
+		defaultDuty = true,
+		grades = {
+            ['0'] = {
+                name = "Cashier",
+                payment = 100
+            },
+			['1'] = {
+                name = "Cook",
+				isboss = true,
+                payment = 250
+            },
+			['2'] = {
+                name = "Manager",
+				isboss = true,
+                payment = 350
+            },
+			['3'] = {
+                name = "Store Owner",
+				isboss = true,
+                payment = 500
+            },
+        },
+	},
+
 # dpemotes | dpemotes/client/animationlist.lua under DP.PropEmotes = {
 
 -   ["bubbletea"] = {"amb@world_human_drinking@coffee@male@idle_a", "idle_c", "", AnimationOptions = 
@@ -154,13 +184,14 @@ PolyZone - https://github.com/mkafrin/PolyZone
 
 berkie-target - https://github.com/BerkieBb/berkie-target (Only needed if not using draw text)
  ## Outdated versions (move to qb-menu & qb-input)
-nh-context - ~~https://github.com/nerohiro/nh-context (owner removed script)~~ See folder [NH] for scripts
+qb-menu - https://github.com/qbcore-framework/qb-menu
 
-nh-keyboard - ~~https://github.com/nerohiro/nh-keyboard (owner removed script)~~ See folder [NH] for scripts
+qb-input - https://github.com/qbcore-framework/qb-input
 
 ## To-Do
 
-- Add additional recipe items { tapioka balls, milk, tea, etc. }
+- ~~Add additional recipe items { tapioka balls, milk, tea, etc. }~~
+- Add ingredients for Sandwiches / Bento Boxes / Sushi { Rice, seaweed, IC Sandy Bread, Ice Cream (vanilla/choc) }
 ## Credits : 
 
 - idrp ( https://github.com/idrp/uWuCafe ) for props, items, and emotes

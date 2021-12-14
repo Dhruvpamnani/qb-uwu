@@ -5,13 +5,13 @@ Citizen.CreateThread(function()
 	exports['qb-target']:AddBoxZone("uwuDuty", vector3(-593.99, -1052.34, 22.34), 1, 1.2, {
 		name = "uwuDuty",
 		heading = 91,
-		debugPoly = false,
+		debugpoly = false,
 		minZ=21.0,
 		maxZ=24.6,
 	}, {
 		options = {
 		    {  
-			event = "qb-uwu:DutyB",
+			event = "qb-uwu:DutyUwu",
 			icon = "far fa-clipboard",
 			label = "Clock On/Off",
 			job = "uwu",
@@ -23,7 +23,7 @@ Citizen.CreateThread(function()
 		exports['qb-target']:AddBoxZone("uwu_tray_1", vector3(-584.1, -1062.1, 22.6), 0.5, 0.7, {
 			name = "uwu_tray_1",
 			heading = 87.8,
-			debugPoly = false,
+			debugpoly = false,
 			minZ=21.1,
 			maxZ=22.6,
 		}, {
@@ -40,7 +40,7 @@ Citizen.CreateThread(function()
 	exports['qb-target']:AddBoxZone("uwu_tray_2", vector3(-584.11, -1059.39, 22.67), 0.5, 0.7, {
 		name="uwu_tray_2",
 		heading=87.8,
-		debugPoly = false,
+		debugpoly = false,
 		minZ=21.1,
 		maxZ=22.6,
 	}, {
@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
 	exports['qb-target']:AddBoxZone("uwu_tray_3", vector3(-587.59, -1059.67, 22.5), 1.6, 4.6, {
 		name="uwu_tray_3",
 		heading=89,
-		debugPoly = false,
+		debugpoly = false,
 		minZ=21.0,
 		maxZ=22.6,
 	}, {
@@ -71,73 +71,16 @@ Citizen.CreateThread(function()
 		distance = 3.5
 	})
 
---Unused functions without additional ingredients
---[[
-	exports['qb-target']:AddBoxZone("uwucooker", vector3(-590.86, -1056.49, 22.44), 0.8, 2.1, {
-		name="uwucooker",
-		heading=91,
-		debugPoly = false,
-		minZ=21.0,
-		maxZ=22.4,
-	}, {
-		options = {
-			{
-				event = "qb-uwu:PattyFry",
-				icon = "fas fa-hamburger",
-				label = "Cooking Station",
-				job = "uwu",
-			},
-		},
-		distance = 1.5
-	})
-
-	exports['qb-target']:AddBoxZone("uwucooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
-		name="uwucooker2 ",
-		heading=34,
-		debugPoly=false,
-		minZ=13.0,
-		maxZ=14.3,
-	}, {
-		options = {
-			{
-				event = "qb-uwu:PattyFry",
-				icon = "fas fa-hamburger",
-				label = "Cook Station 2",
-				job = "uwu",
-			},
-		},
-		distance = 1.5
-	})
-
-		exports['qb-target']:AddBoxZone("uwufryer", vector3(-1202.01, -899.27, 14.0), 2.5, 1.5, {
-		name="uwufryer",
-		heading=35,
-		debugPoly=false,
-		minZ=13.0,
-		maxZ=14.4,
-		}, {
-		    options = {
-			{
-			    event = "qb-uwu:Fries",
-			    icon = "fas fa-box",
-			    label = "Make Fries",
-			    job = "uwu",
-			},
-		    },
-		    distance = 1.5
-		})
-
-
-	exports['qb-target']:AddBoxZone("uwudrinks", vector3(-1199.54, -895.52, 14.0), 2.2, 0.6, {
+	exports['qb-target']:AddBoxZone("uwudrinks", vector3(-590.76, -1059.74, 22.46), 1.4, 0.6, {
 	    name="uwudrinks",
-	    heading=34,
+	    heading=355.34,
 	    debugPoly=false,
-	    minZ=13.8,
-	    maxZ=14.8,
+	    minZ=21.0,
+	    maxZ=23.8,
 	    }, {
 		options = {
 		    {
-			event = "nh-context:DrinkMenu",
+			event = "nh-context:uwuDrinkMenu",
 			icon = "fas fa-filter",
 			label = "Make Some Drinks",
 			job = "uwu",
@@ -146,29 +89,10 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	    })
 
-        exports['qb-target']:AddBoxZone("uwudrinks2", vector3(-1189.08, -905.28, 14.0), 1.15, 0.7, {
-            name="uwudrinks2",
-            heading=33,
-            debugPoly=false,
-            minZ=13.8,
-            maxZ=14.8,
-            }, {
-                options = {
-                    {
-                        event = "nh-context:DrinkMenu",
-                        icon = "fas fa-filter",
-                        label = "Make Some Drinks",
-                        job = "uwu",
-                    },
-                },
-                distance = 1.5
-            })
-
---]]
-         exports['qb-target']:AddBoxZone("uwufridge", vector3(-591.31, -1058.67, 22.43), 1.6, 1, {
+        exports['qb-target']:AddBoxZone("uwufridge", vector3(-591.31, -1058.67, 22.43), 1.6, 1, {
             name="uwufridge",
             heading=89.0,
-            debugPoly = false,
+            debugpoly = false,
             minZ=21.0,
             maxZ=23.6,
         }, {
@@ -176,56 +100,90 @@ Citizen.CreateThread(function()
                     {
                         event = "nh-context:ordermenu2",
                         icon = "fas fa-laptop",
-                        label = "Select Pre-made food items",
+                        label = "Select From A Selection of Ingredients",
                         job = "uwu",
                     },
                 },
                 distance = 1.5
             })
--- Not sure why this doesn't work
---[[
-        exports['qb-target']:AddBoxZone("uwudisplay", vector3(-587.1, -1059.55, 22.43), 1.6, 4.6, {
-            name="uwudisplay",
-            heading=270,
-            debugPoly = false,
-            minZ=21.6,
+
+-- Unfunctional without adding ingredients
+
+        exports['qb-target']:AddBoxZone("microwaveFood", vector3(-590.97, -1061.13, 22.94), 0.7, 1.5, {
+            name="microwaveFood",
+            heading=91.25,
+            debugPoly=false,
+            minZ=23.0,
+            maxZ=23.5,
+        }, {
+                options = {
+                    {
+                        event = "nh-context:uwuMicrowave",
+                        icon = "fas fa-rocket",
+                        label = "Microwave Food",
+                        job = "uwu",
+                    },
+                },
+                distance = 1.5
+            })
+
+        exports['qb-target']:AddBoxZone("misoStation", vector3(-590.95, -1056.56, 22.28), 0.7, 1.5, {
+            name="misoStation",
+            heading=91.25,
+            debugPoly=false,
+            minZ=22.3,
+            maxZ=22.6,
+        }, {
+                options = {
+                    {
+                        event = "nh-context:misoSoup",
+                        icon = "fas fa-rocket",
+                        label = "Make Miso Soup",
+                        job = "uwu",
+                    },
+                },
+                distance = 1.5
+            })
+
+        exports['qb-target']:AddBoxZone("cupcakeStation", vector3(-590.93, -1064.12, 22.34), 0.7, 0.7, {
+            name="cupcakeStation",
+            heading=91.25,
+            debugPoly=false,
+            minZ=22.3,
             maxZ=22.8,
         }, {
                 options = {
                     {
-                        event = "qb-uwu:Storage",
-                        icon = "fas fa-box",
-                        label = "Storage",
+                        event = "nh-context:cupcake",
+                        icon = "fas fa-rocket",
+                        label = "Make Some Cupcakes",
                         job = "uwu",
                     },
                 },
                 distance = 1.5
             })
---]]
--- Unfunctional without adding ingredients
---[[
-        exports['qb-target']:AddBoxZone("craftburger", vector3(-1197.57, -899.41, 14.0), 1.8, 0.7, {
-            name="craftburger",
-            heading=304,
+
+        exports['qb-target']:AddBoxZone("sandwichStation", vector3(-590.93, -1063.05, 22.34), 0.7, 0.7, {
+            name="sandwichStation",
+            heading=91.25,
             debugPoly=false,
-            minZ=13.0,
-            maxZ=14.4,
+            minZ=22.3,
+            maxZ=22.8,
         }, {
                 options = {
                     {
-                        event = "nh-context:Burgers",
-                        icon = "fas fa-cheeseburger",
-                        label = "Burger Work Station",
+                        event = "nh-context:sandwich",
+                        icon = "fas fa-rocket",
+                        label = "Make Some Food",
                         job = "uwu",
                     },
                 },
                 distance = 1.5
             })
---]]
 
         exports['qb-target']:AddBoxZone("uwu_register_1", vector3(-584.25, -1058.8, 22.37), 0.5, 0.4, {
             name="uwu_register_1",
-            debugPoly = false,
+            debugpoly = false,
             heading=270,
             minZ=21.0,
             maxZ=22.8,
@@ -244,7 +202,7 @@ Citizen.CreateThread(function()
 
         exports['qb-target']:AddBoxZone("uwu_register_2", vector3(-584.25, -1061.5, 22.37), 0.6, 0.5, {
             name="uwu_register_2",
-            debugPoly = false,
+            debugpoly = false,
             heading=270,
             minZ=21.0,
             maxZ=22.8,
@@ -260,122 +218,35 @@ Citizen.CreateThread(function()
                     },
                     distance = 1.5
                 })  
-
--- Not needed
---[[
-        exports['qb-target']:AddBoxZone("uwu_register_3", vector3(-1193.39, -895.22, 14.0), 0.6, 0.4, {
-            name="uwu_register_3",
-            debugPoly=false,
-            heading=125,
-            minZ=14.0,
-            maxZ=14.4,
-                    }, {
-                            options = {
-                                {
-                                    event = "qb-uwu:bill",
-                                    parms = "3",
-                                    icon = "fas fa-credit-card",
-                                    label = "Charge Customer",
-                                    job = "uwu",
-                                },
-                            },
-                            distance = 1.5
-                        })  
-
-
-
-
-        exports['qb-target']:AddBoxZone("uwu_register_4", vector3(-1192.52, -906.65, 14.0), 0.5, 0.5, {
-            name="uwu_register_4",
-            heading=0,
-            debugPoly=false,
-            minZ=13.8,
-            maxZ=14.2,
-                }, {
-                        options = {
-                            {
-                                event = "qb-uwu:bill",
-                                parms = "4",
-                                icon = "fas fa-credit-card",
-                                label = "Charge Customer",
-                                job = "uwu",
-                            },
-                        },
-                        distance = 1.5
-            })
---]]
 end)
 
 
--- NH - Context --
---[[
-RegisterNetEvent('nh-context:Burgers', function(data)
+-- 
+RegisterNetEvent('nh-context:uwuMicrowave', function(data)
     TriggerEvent('nh-context:sendMenu', {
         {
             id = 0,
-            header = "| Available Burgers |",
+            header = "| Cook Food in the Microwave |",
             txt = "",
         },
         {
             id = 1,
-            header = "• Moneyshot Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            header = "• Pancakes",
+            txt = "Flour, Water, Eggs",
             params = {
-                event = "qb-uwu:MoneyShot"
+                event = "qb-uwu:pancake"
             }
         },
         {
             id = 2,
-            header = "• Meat Free Burger",
-            txt = "Bun , Tomato , Lettuce",
-            params = {
-                event = "qb-uwu:MeatFree"
-            }
-        },
-        {
-            id = 3,
-            header = "• Bleeder Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-uwu:BleederBurger"
-            }
-        },
-        {
-            id = 4,
-            header = "• The Heart Stopper",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-uwu:HeartStopper"
-            }
-        },
-        {
-            id = 5,
-            header = "• Torpedo Roll",
-            txt = "Bun , Cooked Meat",
-            params = {
-                event = "qb-uwu:Torpedo"
-            }
-        },
-        {
-            id = 6,
-            header = "• Murder Meal",
-            txt = "The Heart Stopper, Fries and SoftDrink",
-            params = {
-                event = "qb-uwu:CreateMurderMeal"
-            }
-        },
-        {
-            id = 7,
-            header = "Close (ESC)",
+            header = "Nevermind (ESC)",
             txt = "",
         },
     })
 end)
 
---]]
-
 RegisterNetEvent('nh-context:ordermenu2', function(data)
-    exports['qb-menu']:openMenu({
+    TriggerEvent('nh-context:sendMenu', {
         {
             id = 0,
             header = "| Fridge |",
@@ -383,7 +254,7 @@ RegisterNetEvent('nh-context:ordermenu2', function(data)
         },
         {
             id = 1,
-            header = "• Browse Food & Drink Items",
+            header = "• Browse Ingredients",
             txt = "Availability access.",
             params = {
                 event = "qb-uwu:shop"
@@ -405,8 +276,96 @@ RegisterNetEvent('nh-context:ordermenu2', function(data)
     })
 end)
 
---[[
-RegisterNetEvent('nh-context:DrinkMenu', function(data)
+-- Miso Soup
+
+RegisterNetEvent('nh-context:misoSoup', function(data)
+    TriggerEvent('nh-context:sendMenu', {
+        {
+            id = 0,
+            header = "| Miso Soup Station |",
+            txt = "",
+        },
+        {
+            id = 1,
+            header = "• Make Miso Soup",
+            txt = "Miso Paste, water, tofu",
+            params = {
+                event = "qb-uwu:misoSoup"
+            }
+        },
+        {
+            id = 2,
+            header = "Nevermind (ESC)",
+            txt = "",
+        },
+    })
+end)
+
+RegisterNetEvent('nh-context:cupcake', function(data)
+    TriggerEvent('nh-context:sendMenu', {
+        {
+            id = 0,
+            header = "| Cupcake Station |",
+            txt = "",
+        },
+        {
+            id = 1,
+            header = "• Make some cupcakes",
+            txt = "Water, eggs, flour",
+            params = {
+                event = "qb-uwu:cupcake"
+            }
+        },
+        {
+            id = 2,
+            header = "Nevermind (ESC)",
+            txt = "",
+        },
+    })
+end)
+
+RegisterNetEvent('nh-context:sandwich', function(data)
+    TriggerEvent('nh-context:sendMenu', {
+        {
+            id = 0,
+            header = "| Food Creation Station |",
+            txt = "",
+        },
+        {
+            id = 1,
+            header = "• Make some Sushi",
+            txt = "Eggs, Flour, Water",
+            params = {
+                event = "qb-uwu:sushi"
+            }
+        },
+        {
+            id = 2,
+            header = "• Make a Vanilla Sandwich",
+            txt = "Milk",
+            params = {
+                event = "qb-uwu:vSandwich"
+            }
+        },
+        {
+            id = 3,
+            header = "• Make a Chocolate Sandwich",
+            txt = "Milk",
+            params = {
+                event = "qb-uwu:cSandwich"
+            }
+        },
+        {
+            id = 4,
+            header = "Nevermind (ESC)",
+            txt = "",
+        },
+    })
+end)
+
+-- Bubble Tea 
+
+RegisterNetEvent('nh-context:uwuDrinkMenu', function(data)
     TriggerEvent('nh-context:sendMenu', {
         {
             id = 0,
@@ -415,30 +374,37 @@ RegisterNetEvent('nh-context:DrinkMenu', function(data)
         },
         {
             id = 1,
-            header = "• Soft Drink",
-            txt = "Soda Syrup",
+            header = "• Blueberry Bubble Tea",
+            txt = "Blueberry flavored",
             params = {
-                event = "qb-uwu:SoftDrink"
+                event = "qb-uwu:bbtea"
             }
         },
         {
             id = 2,
-            header = "• Milkshake",
-            txt = "Milkshake Formula",
+            header = "• Rose Bubble Tea",
+            txt = "Rose flavored",
             params = {
-                event = "qb-uwu:mShake"
+                event = "qb-uwu:rosetea"
             }
         },
         {
             id = 3,
-            header = "Close (ESC)",
+            header = "• Mint Bubble Tea",
+            txt = "Mint flavored",
+            params = {
+                event = "qb-uwu:minttea"
+            }
+        },
+        {
+            id = 4,
+            header = "Nevermind (ESC)",
             txt = "",
         },
     })
 end)
---]]
 
--- Bill Stuff --
+-- Till Stuff --
 RegisterNetEvent("qb-uwu:bill")
 AddEventHandler("qb-uwu:bill", function()
     local bill = exports["nh-keyboard"]:KeyboardInput({

@@ -41,62 +41,137 @@ AddEventHandler("qb-uwu:bill:player", function(playerId, amount)
             TriggerClientEvent('QBCore:Notify', source, 'No Access', 'error')
         end
 end)
--- Unused 
---[[
-QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientBurger', function(source, cb)
+
+-- MisoSoup yummy
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientMiso', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local lettuce = Ply.Functions.GetItemByName("burger-lettuce")
-    local meat = Ply.Functions.GetItemByName("burger-meat")
-    local bun = Ply.Functions.GetItemByName("burger-bun")
-    local tomato = Ply.Functions.GetItemByName("burger-tomato")
-    if lettuce ~= nil and meat ~= nil and bun ~= nil and tomato ~= nil then
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local tofu = Ply.Functions.GetItemByName("tofu")
+    local misopaste = Ply.Functions.GetItemByName("miso-paste")
+    if water ~= nil and tofu ~= nil and misopaste ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientTorpedo', function(source, cb)
+-- Pancake
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientPancake', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local meat = Ply.Functions.GetItemByName("burger-meat")
-    local bun = Ply.Functions.GetItemByName("burger-bun")
-    if meat ~= nil and bun ~= nil then
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local flour = Ply.Functions.GetItemByName("flour")
+    local eggs = Ply.Functions.GetItemByName("eggs")
+    if water ~= nil and flour ~= nil and eggs ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientMeatfree', function(source, cb)
+-- Blueberry Bubble Tea
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientBbtea', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local bun = Ply.Functions.GetItemByName("burger-bun")
-    local tomato = Ply.Functions.GetItemByName("burger-tomato")
-    local lettuce = Ply.Functions.GetItemByName("burger-lettuce")
-    if bun ~= nil and lettuce ~= nil and tomato ~= nil then
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local milk = Ply.Functions.GetItemByName("milk")
+    local tapiokaballs = Ply.Functions.GetItemByName("tapiokaballs")
+    local bbflavoring = Ply.Functions.GetItemByName("bb-flavoring")
+    if water ~= nil and milk ~= nil and tapiokaballs ~= nil and bbflavoring ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientMurderMeal', function(source, cb)
+-- Rose Bubble Tea
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientRosetea', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local fries = Ply.Functions.GetItemByName("burger-fries")
-    local heartstopper = Ply.Functions.GetItemByName("burger-heartstopper")
-    local software = Ply.Functions.GetItemByName("burger-softdrink")
-    if fries ~= nil and heartstopper ~= nil and software ~= nil then
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local milk = Ply.Functions.GetItemByName("milk")
+    local tapiokaballs = Ply.Functions.GetItemByName("tapiokaballs")
+    local roseflavoring = Ply.Functions.GetItemByName("rose-flavoring")
+    if water ~= nil and milk ~= nil and tapiokaballs ~= nil and roseflavoring ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
 
-QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-uwu:MurderMeal", source, item.name)
+-- Mint Bubble Tea
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientMinttea', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local milk = Ply.Functions.GetItemByName("milk")
+    local tapiokaballs = Ply.Functions.GetItemByName("tapiokaballs")
+    local mintflavoring = Ply.Functions.GetItemByName("mint-flavoring")
+    if water ~= nil and milk ~= nil and tapiokaballs ~= nil and mintflavoring ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
 end)
---]]
+
+-- Cupcakes
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientCupcake', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local eggs = Ply.Functions.GetItemByName("eggs")
+    local flour = Ply.Functions.GetItemByName("flour")
+    if water ~= nil and eggs ~= nil and flour ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
+
+-- Sushi
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientSushi', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local eggs = Ply.Functions.GetItemByName("eggs")
+    local flour = Ply.Functions.GetItemByName("flour")
+    if water ~= nil and eggs ~= nil and flour ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
+
+-- Vanilla Sandwich
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientvSandwich', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local milk = Ply.Functions.GetItemByName("milk")
+    if milk ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
+
+-- Chocolate Sandwich
+
+QBCore.Functions.CreateCallback('qb-uwu:server:get:ingredientcSandwich', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local milk = Ply.Functions.GetItemByName("milk")
+    if milk ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
